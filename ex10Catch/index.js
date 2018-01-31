@@ -1,12 +1,16 @@
+const alwaysThrows = {
+  // throw "OH NOES";
+};
+
+const iterate = (number) => {
+  console.log(number);
+  return number + 1;
+};
+
 const wrapper = (callback) => {
-  const alwaysThrows = {
 
-  };
 
-  const iterate = (number) => {
-
-  };
 };
 
 
-module.exports = wrapper;
+module.exports = { alwaysThrows, wrapper, iterate };
