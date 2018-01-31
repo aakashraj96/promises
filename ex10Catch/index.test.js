@@ -15,3 +15,13 @@ describe('Testing testfun', () => {
     expect(testfun.iterate(1)).toEqual(2);
   });
 });
+
+describe('Testing alwaysThrows', () => {
+  test('expecting error', () => {
+    try {
+      testfun.alwaysThrows();
+    } catch (err) {
+      expect(err.message).toEqual('OH NOES');
+    }
+  });
+});
