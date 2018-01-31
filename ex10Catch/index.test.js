@@ -1,14 +1,5 @@
 const testfun = require('./index.js');
 
-// describe('Testing catch', () => {
-//   test('', (done) => {
-//     const callback = (data) => {
-//       expect(data).toEqual('');
-//       done();
-//     };
-//     testFun(callback);
-//   });
-// });
 
 describe('Testing testfun', () => {
   test('Passing 1, expecting 2', () => {
@@ -23,5 +14,15 @@ describe('Testing alwaysThrows', () => {
     } catch (err) {
       expect(err.message).toEqual('OH NOES');
     }
+  });
+});
+
+describe('Testing wrapper', () => {
+  test('Expecting 12345OH NOES', (done) => {
+    const callback = (data) => {
+      expect(data).toEqual('12345OH NOES');
+      done();
+    };
+    testfun.wrapper(callback);
   });
 });
